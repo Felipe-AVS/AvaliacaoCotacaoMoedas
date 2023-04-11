@@ -21,12 +21,14 @@
         <div class="row">
             <div class="col-12">
                    <h1>Cotador de Moedas</h1>
-                   <input type="text" placeholder="Quantia para cotar"></input>
+                   <input type="text" placeholder="Quantia em Reais"></input>
                    <input type="text" placeholder="Quantia Cotada"></input><br>
-                   <input id="RadioUS" type="radio" onclick="radioTypeFunction('US')" value="US">  Dólar</input>
-                   <input id="RadioEU" type="radio" onclick="radioTypeFunction('EU')" value="EU">  Euro</input>
-                   <input id="RadioLB" type="radio" onclick="radioTypeFunction('LB')" value="LB">  Libra</input>
-            </div>
+                   
+                   <input id="RadioUS" name="RADIO" type="radio" onclick="radioTypeFunction('US')" value="US">  Dólar</input>
+                   <input id="RadioEU" name="RADIO" type="radio" onclick="radioTypeFunction('EU')" value="EU">  Euro</input>
+                   <input id="RadioLB" name="RADIO" type="radio" onclick="radioTypeFunction('LB')" value="LB">  Libra</input><br>
+                   <input type="text"></input>
+                </div>
         </div>
     </div>
     </div>
@@ -37,9 +39,7 @@
         function radioTypeFunction(moeda){
            
             switch(moeda){
-                case moeda == document.getElementsByClassName("RadioUS").value:
-                document.getElementsByClassName("RadioEU")
-                break;
+                
             }
 
         }
