@@ -12,30 +12,51 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
 </head>
+<style>
 
+    body{
+background-color: lightblue;
 
+    }
+
+    input{
+        border-radius: 20px;
+        margin: 5px;
+        text-align: center;
+    }
+
+     #Conv1{
+        color: green;
+     }
+     #Conv2{
+        color: green;
+     }
+
+     #Conv3{
+        color: green;
+     }
+
+</style>
+ 
 <body>
-
-    </div>
-    <div class="container-fluid text-center">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1>Cotador de Moedas</h1>
-                <input type="text" id="reais" oninput="cotar('BR')" placeholder="Quantia em Reais"></input><br>
+    <main>
+    <div class="container-fluid text-center" id="formulario">
+            <div id="cotador" class="col-12 text-center">
+                <h1>Cotador de Moedas</h1><br>
+                <h4>Quantia em Reais à ser Convertida:</h4>
+                <input type="text" style="width: 600px;" id="reais" oninput="cotar('BR')" placeholder="Quantia em Reais"></input><br>
+                <br>
+                <h6>Valor do Dólar Atual Valor   do Euro Atual    Valor da Libra Atual</h6>
                 <input type="text" id="Dolar" oninput="cotar('US')" placeholder="Valor do Dólar"></input>
                 <input type="text" id="Euro" oninput="cotar('EU')" placeholder="Valor do Euro"></input>
                 <input type="text" id="Libra" oninput="cotar('LB')" placeholder="Valor da Libra"></input>
-                <br>
+                <br><br>
                 <input type="text" id="Conv1" placeholder="Conversão do Dólar" id="Result"></input>
                 <input type="text" id="Conv2" placeholder="Conversão do Euro" id="Result"></input>
                 <input type="text" id="Conv3" placeholder="Conversão da Libra" id="Result"></input>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
+</main>
     <script>
         var moeda, cotDolar, cotEuro, cotLibra, ResultDolar, ResultEuro, ResultLibra;
 
@@ -81,10 +102,7 @@
 
     </script>
 
-    <style>
-        
-
-    </style>
+   
 </body>
 
 </html>
