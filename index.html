@@ -13,50 +13,76 @@
         </script>
 </head>
 <style>
-
-    body{
-background-color: lightblue;
+    body {
+        background-color: lightblue;
 
     }
 
-    input{
+    input {
         border-radius: 20px;
         margin: 5px;
         text-align: center;
     }
 
-     #Conv1{
+    #Conv1 {
         color: green;
-     }
-     #Conv2{
-        color: green;
-     }
+    }
 
-     #Conv3{
+    #Conv2 {
         color: green;
-     }
+    }
 
+    #Conv3 {
+        color: green;
+    }
 </style>
- 
+
 <body>
     <main>
-    <div class="container-fluid text-center" id="formulario">
+        <div class="container-fluid text-center" id="formulario">
             <div id="cotador" class="col-12 text-center">
                 <h1>Cotador de Moedas</h1><br>
                 <h4>Quantia em Reais à ser Convertida:</h4>
-                <input type="text" style="width: 600px;" id="reais" oninput="cotar('BR')" placeholder="Quantia em Reais"></input><br>
+                <input type="text" style="width: 57%;" id="reais" oninput="cotar('BR')"
+                    placeholder="Quantia em Reais"></input><br>
                 <br>
-                <h6>Valor do Dólar Atual Valor   do Euro Atual    Valor da Libra Atual</h6>
-                <input type="text" id="Dolar" oninput="cotar('US')" placeholder="Valor do Dólar"></input>
-                <input type="text" id="Euro" oninput="cotar('EU')" placeholder="Valor do Euro"></input>
-                <input type="text" id="Libra" oninput="cotar('LB')" placeholder="Valor da Libra"></input>
+                <div class="row" style="margin-left: 20%;">
+                    <div id="cotador" class="col-3">
+                        <h6>Valor do Dólar Atual</h6>
+                        <input type="text" id="Dolar" oninput="cotar('US')" placeholder="Valor do Dólar"></input>
+                    </div>
+                    <div id="cotador" class="col-3">
+                        <h6>Valor do Euro Atual</h6>
+                        <input type="text" id="Euro" oninput="cotar('EU')" placeholder="Valor do Euro"></input>
+                    </div>
+                    <div id="cotador" class="col-3">
+                        <h6>Valor do Libra Atual</h6>
+                        <input type="text" id="Libra" oninput="cotar('LB')" placeholder="Valor da Libra"></input>
+                    </div>
+                </div>
                 <br><br>
-                <input type="text" id="Conv1" placeholder="Conversão do Dólar" id="Result"></input>
-                <input type="text" id="Conv2" placeholder="Conversão do Euro" id="Result"></input>
-                <input type="text" id="Conv3" placeholder="Conversão da Libra" id="Result"></input>
+                <div class="row" style="margin-left: 20%;">
+                    <div id="cotador" class="col-3">
+                        <h6>Resultado Conversão Dólar</h6>
+                        <input type="text" id="Conv1" placeholder="Conversão do Dólar" id="Result"></input>
+                    </div>
+                    <div id="cotador" class="col-3">
+                        <h6>Resultado Conversão Euro</h6>
+                        <input type="text" id="Conv2" placeholder="Conversão do Euro" id="Result"></input>
+                    </div>
+                    <div id="cotador" class="col-3">
+                        <h6>Resultado Conversão Libra</h6>
+                        <input type="text" id="Conv3" placeholder="Conversão da Libra" id="Result"></input>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
         </div>
-</main>
+    </main>
     <script>
         var moeda, cotDolar, cotEuro, cotLibra, ResultDolar, ResultEuro, ResultLibra;
 
@@ -102,7 +128,7 @@ background-color: lightblue;
 
     </script>
 
-   
+
 </body>
 
 </html>
