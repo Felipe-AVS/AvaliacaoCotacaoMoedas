@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -20,16 +20,16 @@
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-12 text-center">
-                   <h1>Cotador de Moedas</h1>
-                   <input type="text" id="reais" oninput="cotar('BR')" placeholder="Quantia em Reais"></input><br>
-                   <input type="text" id="Dolar" oninput="cotar('US')" placeholder="Valor do Dólar"></input>
-                   <input type="text" oninput="cotar('EU')" placeholder="Valor do Euro"></input>
-                   <input type="text" oninput="cotar('LB')" placeholder="Valor da Libra"></input>
-                   <br>
-                   <input type="text" placeholder="Conversão do Dólar" id="Result"></input>
-                   <input type="text" placeholder="Conversão do Euro" id="Result"></input>
-                   <input type="text" placeholder="Conversão da Libra" id="Result"></input>
-                </div>
+                <h1>Cotador de Moedas</h1>
+                <input type="text" id="reais" oninput="cotar('BR')" placeholder="Quantia em Reais"></input><br>
+                <input type="text" id="Dolar" oninput="cotar('US')" placeholder="Valor do Dólar"></input>
+                <input type="text" id="Euro" oninput="cotar('EU')" placeholder="Valor do Euro"></input>
+                <input type="text" id="Libra" oninput="cotar('LB')" placeholder="Valor da Libra"></input>
+                <br>
+                <input type="text" id="Conv1" placeholder="Conversão do Dólar" id="Result"></input>
+                <input type="text" id="Conv2" placeholder="Conversão do Euro" id="Result"></input>
+                <input type="text" id="Conv3" placeholder="Conversão da Libra" id="Result"></input>
+            </div>
         </div>
     </div>
     </div>
@@ -37,32 +37,54 @@
     </div>
 
     <script>
-        var moeda, Dolar, cotEuro, cotLibra, Result;
+        var moeda, cotDolar, cotEuro, cotLibra, ResultDolar, ResultEuro, ResultLibra;
 
-        function cotar(c){
-            switch(c){
+        function cotar(c) {
+            switch (c) {
                 case 'BR':
-                moeda = document.getElementById("reais").value;
-                break;
+                    moeda = document.getElementById("reais").value;
+                    break;
 
                 case 'US':
-                moeda = document.getElementById("reais").value;
-                break;
+                    cotDolar = document.getElementById("Dolar").value;
+                    break;
 
-                case 'BR':
-                moeda = document.getElementById("reais").value;
-                break;
-                
-                case 'BR':
-                moeda = document.getElementById("reais").value;
-                break;
+                case 'EU':
+                    cotEuro = document.getElementById("Euro").value;
+                    break;
+
+                case 'LB':
+                    cotLibra = document.getElementById("Libra").value;
+                    break;
             }
-           
+
+            if (moeda != null) {
+                if (cotDolar != null) {
+                    ResultDolar = moeda / cotDolar;
+                    document.getElementById("Conv1").value = ResultDolar.toFixed(2);
+
+                }
+                if (cotEuro != null) {
+                    ResultEuro = moeda / cotEuro;
+                    document.getElementById("Conv2").value = ResultEuro.toFixed(2);
+                }
+                if (cotLibra != null) {
+                    ResultLibra = moeda / cotLibra;
+                    document.getElementById("Conv3").value = ResultLibra.toFixed(2);
+                }
+
+
+            }
 
 
         }
 
     </script>
+
+    <style>
+        
+
+    </style>
 </body>
 
 </html>
